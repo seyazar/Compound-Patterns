@@ -1,0 +1,7 @@
+# Compound-Patterns
+In this small café simulation, we applied State, Adapter, Template, Facade, and Decorator patterns. In the application client can choose one of the offered menu options and order using the command line. There are sandwich and burger options as main course. For beverages there ayran and lemonade options. 
+•	We used the State pattern for the ClubSandwich concrete class. This class has two states, cold sandwich and hot sandwich. In default, the state of the sandwich is coldState, when a customer orders a sandwich, the state is changed to hotState.
+•	We used Adapter pattern to adapt the Burger interface to the Sandwich interface. 
+•	Template pattern is used in the preparation of the beverages. We used a template method pepareColdBeverages. In this method we have some methods (pourWater() and pourInCup()) which are implemented the same way for both of the beverage classes (Ayran and Lemonade). And since we are using different ingredients for the preparation of ayran and lemonade, we also called an abstract addIngredients() method inside the template method. This abstract method is overridden in concrete beverage classes according to the appropriate ingredients.  
+•	We used Facade pattern to put together the preparation and the presentation of the order to the customer.
+•	Finally, we used the Decorator pattern to wrap our cold beverages with different condiments like ice and mint. 
